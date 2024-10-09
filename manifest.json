@@ -1,20 +1,19 @@
 {
-    "manifest_version": 3,
-    "name": "LinkedIn Auto Connect",
-    "version": "1.0",
-    "description": "Automatically connect with visible profiles on LinkedIn.",
-    "permissions": ["activeTab", "scripting"],
-    "background": {
-      "service_worker": "background.js"
-    },
-    "action": {
-      "default_popup": "index.html"
-    },
-    "content_scripts": [
-      {
-        "matches": ["https://www.linkedin.com/mynetwork/grow/*"],
-        "js": ["contentScript.js"]
-      }
-    ]
-  }
-  
+  "manifest_version": 3,
+  "name": "LinkedIn Auto Connect",
+  "version": "1.0",
+  "description": "Automatically connect with visible profiles on LinkedIn.",
+  "permissions": ["activeTab", "scripting"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "index.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.linkedin.com/mynetwork/grow/*"],
+      "js": ["contentScript.js"]
+    }
+  ]
+}

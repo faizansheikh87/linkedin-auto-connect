@@ -1,12 +1,12 @@
-chrome.action.onClicked.addListener((tab) => {
-    console.log("Extension icon clicked");
+// background.js
+chrome.runtime.onInstalled.addListener(() => {
+    console.log('LinkedIn Auto Connect Extension Installed');
+  });
   
-    // Inject the content script
+  chrome.action.onClicked.addListener((tab) => {
     chrome.scripting.executeScript({
-      target: { tabId: tab.id },
+      target: {tabId: tab.id},
       files: ['contentScript.js']
-    }, () => {
-      console.log("Content script injected");
     });
   });
   
